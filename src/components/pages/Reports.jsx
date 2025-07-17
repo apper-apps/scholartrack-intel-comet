@@ -169,14 +169,14 @@ const reportTypes = [
                 <tr key={student.Id} className="hover:bg-gray-50">
                   <td className="px-6 py-4">
                     <div className="flex items-center space-x-3">
-                      <div className="w-8 h-8 bg-gradient-to-r from-primary-100 to-secondary-100 rounded-full flex items-center justify-center">
+<div className="w-8 h-8 bg-gradient-to-r from-primary-100 to-secondary-100 rounded-full flex items-center justify-center">
                         <span className="text-xs font-semibold text-primary-700">
-                          {student.firstName[0]}{student.lastName[0]}
+                          {student.first_name[0]}{student.last_name[0]}
                         </span>
                       </div>
                       <div>
-                        <p className="font-medium text-gray-900">
-                          {student.firstName} {student.lastName}
+<p className="font-medium text-gray-900">
+                          {student.first_name} {student.last_name}
                         </p>
                         <p className="text-sm text-gray-600">{student.grade}</p>
                       </div>
@@ -242,14 +242,14 @@ const reportTypes = [
                 <tr key={student.Id} className="hover:bg-gray-50">
                   <td className="px-6 py-4">
                     <div className="flex items-center space-x-3">
-                      <div className="w-8 h-8 bg-gradient-to-r from-primary-100 to-secondary-100 rounded-full flex items-center justify-center">
+<div className="w-8 h-8 bg-gradient-to-r from-primary-100 to-secondary-100 rounded-full flex items-center justify-center">
                         <span className="text-xs font-semibold text-primary-700">
-                          {student.firstName[0]}{student.lastName[0]}
+                          {student.first_name[0]}{student.last_name[0]}
                         </span>
                       </div>
                       <div>
-                        <p className="font-medium text-gray-900">
-                          {student.firstName} {student.lastName}
+<p className="font-medium text-gray-900">
+                          {student.first_name} {student.last_name}
                         </p>
                         <p className="text-sm text-gray-600">{student.grade}</p>
                       </div>
@@ -305,9 +305,9 @@ const reportTypes = [
               .map((student, index) => (
                 <div key={student.Id} className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
-                    <span className="text-sm font-medium text-gray-600">#{index + 1}</span>
+<span className="text-sm font-medium text-gray-600">#{index + 1}</span>
                     <span className="text-sm text-gray-900">
-                      {student.firstName} {student.lastName}
+                      {student.first_name} {student.last_name}
                     </span>
                   </div>
                   <Badge variant="success">{student.average}%</Badge>
@@ -324,8 +324,8 @@ const reportTypes = [
               .slice(0, 3)
               .map((student) => (
                 <div key={student.Id} className="flex items-center justify-between">
-                  <span className="text-sm text-gray-900">
-                    {student.firstName} {student.lastName}
+<span className="text-sm text-gray-900">
+                    {student.first_name} {student.last_name}
                   </span>
                   <Badge variant="success">{calculateStudentAttendanceRate(student.Id)}%</Badge>
                 </div>
@@ -344,8 +344,8 @@ const reportTypes = [
               .slice(0, 3)
               .map((student) => (
                 <div key={student.Id} className="flex items-center justify-between">
-                  <span className="text-sm text-gray-900">
-                    {student.firstName} {student.lastName}
+<span className="text-sm text-gray-900">
+                    {student.first_name} {student.last_name}
                   </span>
                   <Badge variant="warning">Review</Badge>
                 </div>
@@ -443,14 +443,14 @@ const reportTypes = [
                 <Card key={student.Id} className="p-4 border border-gray-200">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-3">
-                      <div className="w-8 h-8 bg-gradient-to-r from-primary-100 to-secondary-100 rounded-full flex items-center justify-center">
+<div className="w-8 h-8 bg-gradient-to-r from-primary-100 to-secondary-100 rounded-full flex items-center justify-center">
                         <span className="text-xs font-semibold text-primary-700">
-                          {student.firstName[0]}{student.lastName[0]}
+                          {student.first_name[0]}{student.last_name[0]}
                         </span>
                       </div>
                       <div>
-                        <p className="font-medium text-gray-900 text-sm">
-                          {student.firstName} {student.lastName}
+<p className="font-medium text-gray-900 text-sm">
+                          {student.first_name} {student.last_name}
                         </p>
                         <p className="text-xs text-gray-600">{student.grade}</p>
                       </div>

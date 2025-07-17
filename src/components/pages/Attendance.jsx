@@ -1,14 +1,14 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import AttendanceGrid from "@/components/organisms/AttendanceGrid";
 import { useStudents } from "@/hooks/useStudents";
 import { useAttendance } from "@/hooks/useAttendance";
+import Chart from "react-apexcharts";
+import { toast } from "react-toastify";
+import ApperIcon from "@/components/ApperIcon";
+import AttendanceGrid from "@/components/organisms/AttendanceGrid";
 import StatCard from "@/components/molecules/StatCard";
 import Card from "@/components/atoms/Card";
 import Button from "@/components/atoms/Button";
-import ApperIcon from "@/components/ApperIcon";
-import Chart from "react-apexcharts";
-import { toast } from "react-toastify";
 
 const Attendance = () => {
   const { students, loading: studentsLoading, error: studentsError, loadStudents } = useStudents();
@@ -55,10 +55,10 @@ useEffect(() => {
     toast.info("Alert dismissed");
   };
 
-  const handleContactParent = (studentId) => {
+const handleContactParent = (studentId) => {
     const student = students.find(s => s.Id === studentId);
     if (student) {
-      toast.success(`Parent contact initiated for ${student.firstName} ${student.lastName}`);
+      toast.success(`Parent contact initiated for ${student.first_name} ${student.last_name}`);
     }
   };
 
@@ -112,7 +112,6 @@ useEffect(() => {
       }
     };
   };
-
 return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -182,7 +181,7 @@ return (
                     <div key={alert.id} className="flex items-center justify-between p-4 bg-red-50 rounded-lg border border-red-200">
                       <div className="flex-1">
                         <p className="font-medium text-red-900">
-                          {student ? `${student.firstName} ${student.lastName}` : 'Unknown Student'}
+                          {student ? `${student.first_name} ${student.last_name}` : 'Unknown Student'}
                         </p>
                         <p className="text-sm text-red-700">{alert.message}</p>
                         <p className="text-xs text-red-600 mt-1">
