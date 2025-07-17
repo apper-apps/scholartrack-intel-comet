@@ -26,8 +26,20 @@ const handleRetry = () => {
     loadAssignments();
   };
 
-  const handleStudentsClick = () => {
+const handleStudentsClick = () => {
     navigate('/students');
+  };
+
+  const handleAttendanceClick = () => {
+    navigate('/attendance');
+  };
+
+  const handleGradesClick = () => {
+    navigate('/grades');
+  };
+
+  const handleReportsClick = () => {
+    navigate('/reports');
   };
 
   useEffect(() => {
@@ -63,6 +75,9 @@ const handleRetry = () => {
         attendance={attendance}
         assignments={assignments}
         onStudentsClick={handleStudentsClick}
+        onAttendanceClick={handleAttendanceClick}
+        onGradesClick={handleGradesClick}
+        onReportsClick={handleReportsClick}
       />
     </motion.div>
   );

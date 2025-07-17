@@ -9,7 +9,10 @@ const DashboardStats = ({
   grades = [], 
   attendance = [],
   assignments = [],
-  onStudentsClick
+  onStudentsClick,
+  onAttendanceClick,
+  onGradesClick,
+  onReportsClick
 }) => {
   const totalStudents = students.length;
   
@@ -145,19 +148,19 @@ const DashboardStats = ({
           <Card className="p-6">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h3>
             <div className="grid grid-cols-2 gap-4">
-              <button className="p-4 bg-gradient-to-r from-primary-50 to-secondary-50 hover:from-primary-100 hover:to-secondary-100 rounded-lg transition-colors text-left">
+<button onClick={onStudentsClick} className="p-4 bg-gradient-to-r from-primary-50 to-secondary-50 hover:from-primary-100 hover:to-secondary-100 rounded-lg transition-colors text-left">
                 <ApperIcon name="UserPlus" className="w-6 h-6 text-primary-600 mb-2" />
                 <p className="text-sm font-medium text-gray-900">Add Student</p>
               </button>
-              <button className="p-4 bg-gradient-to-r from-success/10 to-green-50 hover:from-success/20 hover:to-green-100 rounded-lg transition-colors text-left">
+              <button onClick={onAttendanceClick} className="p-4 bg-gradient-to-r from-success/10 to-green-50 hover:from-success/20 hover:to-green-100 rounded-lg transition-colors text-left">
                 <ApperIcon name="Calendar" className="w-6 h-6 text-success mb-2" />
                 <p className="text-sm font-medium text-gray-900">Take Attendance</p>
               </button>
-              <button className="p-4 bg-gradient-to-r from-warning/10 to-orange-50 hover:from-warning/20 hover:to-orange-100 rounded-lg transition-colors text-left">
+              <button onClick={onGradesClick} className="p-4 bg-gradient-to-r from-warning/10 to-orange-50 hover:from-warning/20 hover:to-orange-100 rounded-lg transition-colors text-left">
                 <ApperIcon name="BookOpen" className="w-6 h-6 text-warning mb-2" />
                 <p className="text-sm font-medium text-gray-900">Enter Grades</p>
               </button>
-              <button className="p-4 bg-gradient-to-r from-accent-50 to-purple-50 hover:from-accent-100 hover:to-purple-100 rounded-lg transition-colors text-left">
+              <button onClick={onReportsClick} className="p-4 bg-gradient-to-r from-accent-50 to-purple-50 hover:from-accent-100 hover:to-purple-100 rounded-lg transition-colors text-left">
                 <ApperIcon name="BarChart3" className="w-6 h-6 text-accent-600 mb-2" />
                 <p className="text-sm font-medium text-gray-900">View Reports</p>
               </button>
